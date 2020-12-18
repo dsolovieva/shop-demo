@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Demo Option 2</title>
 
+    <base target="_parent">
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -11,27 +12,138 @@
       crossorigin="anonymous"
     />
     <script src="./vendors/iframe-resizer.js"></script>
-    <script>
-      window.addEventListener("beforeunload", () => {
-        console.log("unload");
-        if ("parentIFrame" in window) {
-          console.log("reset height");
-          parentIFrame.autoResize(false);
-          parentIFrame.size("auto");
-        }
-      });
-    </script>
+    <style>
+      html,
+      html a {
+        color: #0c3353;
+      }
+      .hero-image {
+        width: 100%;
+        height: 25rem;
+        background: url("./images/hero.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      .dark {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .products {
+        background: #f2f4f6;
+      }
+      .card {
+        background: #f2f4f6;
+      }
+      .buy {
+        background: #0c3353;
+        color: white;
+      }
+      .footer {
+        background: #0c3353;
+        color: #fff;
+      }
+      .footer a {
+        color: #fff;
+      }
+      small{
+        line-height: 2;
+      }
+    </style>
   </head>
   <body>
-    <h1 class="text-center">All Products</h1>
-    <div class="text-center">
-      <button id="add" type="button" class="btn btn-primary">Add item</button>
-      <button id="remove" type="button" class="btn btn-danger">
-        Remove item
-      </button>
-    </div>
+    <header
+      class="hero-image text-center text-white d-flex flex-column align-items-center justify-content-center"
+    >
+      <div
+        class="dark d-flex flex-column align-items-center justify-content-center"
+      >
+        <h1>Mix Lab</h1>
+        <p>Easy cocktails for the bartender in all of us.</p>
+      </div>
+    </header>
     <main id="content"></main>
     <footer class="text-center mb-5">Thanks!</footer>
+    <footer class="footer">
+      <div class="py-5 px-5">
+        <div class="footer-content">
+          <nav>
+            <div class="d-flex py-4">
+                <a
+                  class="link pr-3"
+                  target="_parent"
+                  rel="noopener noreferrer"
+                  href="/about"
+                >
+                  About Mix Lab
+                </a>
+                <a
+                  class="link pr-3"
+                  target="_parent"
+                  rel="noopener noreferrer"
+                  href="/contact-us"
+                >
+                  Contact Us
+                </a>
+                <a
+                  class="link pr-3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="/terms-and-conditions"
+                >
+                  Terms & Conditions
+                </a>
+                <a
+                  class="link pr-3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="/cookie-policy"
+                >
+                  Cookie Policy
+                </a>
+                <a
+                  className="link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="/privacy-policy"
+                >
+                  Privacy Policy
+                </a>
+            </ul>
+          </nav>
+          <div class="d-flex">
+            <button class="btn btn-info rounded-0 mb-4">DOWNLOAD APP</button>
+            <div class="social-wrapper">
+              <Social />
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="copyright_copyright">
+            <small>©2020. MIXLAB AND ALL MARKS APPEARING ON THE BACARDI GROUP PRODUCTS
+            SHOWN IN THIS PAGE ARE TRADEMARKS OF BACARDI &amp; COMPANY LIMITED
+            OR OF OTHER SUBSIDIARIES OF BACARDI LIMITED. ONLY SHARE WITH THOSE
+            OF LEGAL DRINKING AGE. FOR MORE INFORMATION ON ALCOHOL
+            RESPONSIBILITY VISIT
+            <a
+              class="copyright_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://responsibledrinking.org"
+              >RESPONSIBLEDRINKING.ORG</a
+            >
+            AND
+            <a
+              class="copyright_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://responsibility.org"
+              >RESPONSIBILITY.ORG</a
+            >.
+            </small>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="./js/load-shop.js"></script>
   </body>
 </html>
