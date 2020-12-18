@@ -12,6 +12,10 @@
     />
     <script src="./vendors/iframe-resizer.js"></script>
     <style>
+      html,
+      html a {
+        color: #0c3353;
+      }
       .hero-image {
         width: 100%;
         height: 25rem;
@@ -23,6 +27,16 @@
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
+      }
+      .products {
+        background: #f2f4f6;
+      }
+      .card {
+        background: #f2f4f6;
+      }
+      .buy {
+        background: #0c3353;
+        color: white;
       }
     </style>
   </head>
@@ -37,7 +51,7 @@
         <p>Easy cocktails for the bartender in all of us.</p>
       </div>
     </header>
-    <main id="content"></main>
+    <main id="content"><p class="text-center m-5">Loading...</p></main>
     <footer data-iframe-height class="text-center mb-5">Thanks!</footer>
     <script src="./js/load-shop.js"></script>
   </body>
