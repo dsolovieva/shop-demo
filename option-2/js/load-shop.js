@@ -55,4 +55,4 @@ const createItem = () => {
 
 setTimeout(() => {
   container.innerHTML = initContent;
-}, 0);
+}, 1000);
