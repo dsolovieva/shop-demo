@@ -12,9 +12,22 @@
     />
     <script src="./vendors/iframe-resizer.js"></script>
     <script src="./js/load-shop.js"></script>
+    <script>
+      document.addEventListener("unload", () => {
+        if ("parentIFrame" in window) {
+          parentIFrame.size("auto"); // Set height to 100px
+        }
+      });
+    </script>
   </head>
   <body>
     <h1 class="text-center">All Products</h1>
+    <div class="text-center">
+      <button id="add" type="button" class="btn btn-primary">Add item</button>
+      <button id="remove" type="button" class="btn btn-danger">
+        Remove item
+      </button>
+    </div>
     <main id="content"></main>
     <footer class="text-center mb-5">Thanks!</footer>
   </body>

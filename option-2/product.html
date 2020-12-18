@@ -11,6 +11,13 @@
       crossorigin="anonymous"
     />
     <script src="./vendors/iframe-resizer.js"></script>
+    <script>
+      document.addEventListener("unload", () => {
+        if ("parentIFrame" in window) {
+          parentIFrame.size("auto"); // Set height to 100px
+        }
+      });
+    </script>
   </head>
   <body>
     <a href="./index.html">Back to All Products</a>
