@@ -13,8 +13,10 @@
     <script src="./vendors/iframe-resizer.js"></script>
     <script>
       document.addEventListener("unload", () => {
+        console.log("unload");
         if ("parentIFrame" in window) {
-          parentIFrame.size("auto"); // Set height to 100px
+          console.log("reset height");
+          parentIFrame.size("auto");
         }
       });
     </script>
