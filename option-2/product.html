@@ -14,6 +14,10 @@
     <script>
       window.addEventListener("unload", () => {
         console.log("unload");
+        iFrameResize({
+          autoResize: false,
+          sizeWidth: true,
+        });
         if ("parentIFrame" in window) {
           console.log("reset height");
           parentIFrame.size("auto");
