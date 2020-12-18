@@ -12,7 +12,7 @@
     />
     <script src="./vendors/iframe-resizer.js"></script>
     <script>
-      document.addEventListener("unload", () => {
+      window.addEventListener("unload", () => {
         console.log("unload");
         if ("parentIFrame" in window) {
           console.log("reset height");
