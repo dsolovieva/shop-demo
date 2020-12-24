@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <script src="./vendors/iframe-resizer.js"></script>
-    <script>
+    <!-- <script>
       if ("parentIFrame" in window) {
         parentIFrame.autoResize(false);
         parentIFrame.size("auto");
@@ -27,8 +27,8 @@
           parentIFrame.autoResize(true);
         }
       });
-    </script>
-    <!-- <script>
+    </script> -->
+    <script>
       window.addEventListener("beforeunload", () => {
         console.log("beforeunload");
         if ("parentIFrame" in window) {
@@ -38,7 +38,7 @@
           parentIFrame.autoResize(true);
         }
       });
-    </script> -->
+    </script>
     <style>
       html,
       html a {

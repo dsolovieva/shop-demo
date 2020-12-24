@@ -12,23 +12,23 @@
     />
     <script src="./vendors/iframe-resizer.js"></script>
     <script>
-      if ("parentIFrame" in window) {
-        parentIFrame.autoResize(false);
-        parentIFrame.size("auto");
-        parentIFrame.autoResize(true);
-      }
-      document.addEventListener("readystatechange", () => {
-        console.log("readyState:" + document.readyState);
-        console.log("readyState:" + document.body.offsetHeight);
-        if ("parentIFrame" in window) {
-          console.log("readyState: resize");
-          parentIFrame.autoResize(false);
-          parentIFrame.size(document.body.offsetHeight);
-          parentIFrame.autoResize(true);
-        }
-      });
+      // if ("parentIFrame" in window) {
+      //   parentIFrame.autoResize(false);
+      //   parentIFrame.size("auto");
+      //   parentIFrame.autoResize(true);
+      // }
+      // document.addEventListener("readystatechange", () => {
+      //   console.log("readyState:" + document.readyState);
+      //   console.log("readyState:" + document.body.offsetHeight);
+      //   if ("parentIFrame" in window) {
+      //     console.log("readyState: resize");
+      //     parentIFrame.autoResize(false);
+      //     parentIFrame.size(document.body.offsetHeight);
+      //     parentIFrame.autoResize(true);
+      //   }
+      // });
     </script>
-    <!-- <script>
+    <script>
       window.addEventListener("beforeunload", () => {
         console.log("beforeunload");
         if ("parentIFrame" in window) {
@@ -38,7 +38,7 @@
           parentIFrame.autoResize(true);
         }
       });
-    </script> -->
+    </script>
     <style>
       html,
       html a,
