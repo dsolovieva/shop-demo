@@ -34,7 +34,7 @@
         if ("parentIFrame" in window) {
           console.log("readyState: resize");
           parentIFrame.autoResize(false);
-          parentIFrame.size("auto");
+          parentIFrame.size(0);
           parentIFrame.autoResize(true);
         }
       });
