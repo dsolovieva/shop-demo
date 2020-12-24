@@ -25,6 +25,10 @@
       .card {
         background: #f2f4f6;
       }
+      .img--small {
+        width: 100px;
+        height: 100px;
+      }
     </style>
   </head>
   <body>
@@ -32,16 +36,28 @@
       data-iframe-height
       class="product d-flex justify-content-around flex-wrap flex-md-nowrap p-5 m-5 align-items-start"
     >
-      <img
-        class="w-50 d-none d-md-block mb-3"
-        alt="PATRÓN SILVER Tequila"
-        src="./images/tequila.png"
-      />
-      <img
+      <div class="w-100 d-flex flex-column">
+        <img
+          class="w-100 mb-3"
+          alt="PATRÓN SILVER Tequila"
+          src="./images/tequila.png"
+        />
+        <!-- <img
+          class="w-50 d-none d-md-block mb-3"
+          alt="PATRÓN SILVER Tequila"
+          src="./images/tequila.png"
+        /> -->
+        <!-- <img
         class="w-100 d-md-none mb-3"
         alt="PATRÓN SILVER Tequila"
         src="./images/tequila.png"
-      />
+      /> -->
+        <img
+          class="img--small"
+          src="https://thirstie-prod.s3.amazonaws.com/ckgkvn3yu001xq6qrtchgkgv3/attachments/cki3plwri0nwi2ipgoujtw29w-2.0.0.2000.2000.full.png"
+          alt="2"
+        />
+      </div>
       <div class="c-product-show__column c-product-show__column--content">
         <h1 class="">PATRÓN REPOSADO Tequila</h1>
         <div class="">
