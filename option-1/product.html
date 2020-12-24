@@ -11,6 +11,13 @@
       crossorigin="anonymous"
     />
     <script src="./vendors/iframe-resizer.js"></script>
+    <script>
+      document.addEventListener("beforeunload", () => {
+        if ("parentIFrame" in window) {
+          parentIFrame.sendMessage({ type: "unload" });
+        }
+      });
+    </script>
     <style>
       html,
       html a,
