@@ -11,6 +11,14 @@
       crossorigin="anonymous"
     />
     <script src="./vendors/iframe-resizer.js"></script>
+    <script>
+      window.addEventListener("beforeunload", () => {
+        console.log("beforeunload");
+        if ("parentIFrame" in window) {
+          parentIframe.scrollTo(0, 0);
+        }
+      });
+    </script>
     <style>
       html,
       html a,

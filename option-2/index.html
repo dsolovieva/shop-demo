@@ -3,8 +3,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Demo Option 2</title>
-
-    <base target="_parent">
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -12,6 +10,14 @@
       crossorigin="anonymous"
     />
     <script src="./vendors/iframe-resizer.js"></script>
+    <script>
+      window.addEventListener("beforeunload", () => {
+        console.log("beforeunload");
+        if ("parentIFrame" in window) {
+          parentIframe.scrollTo(0, 0);
+        }
+      });
+    </script>
     <style>
       html,
       html a {
